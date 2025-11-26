@@ -1,7 +1,7 @@
 const numeroFinal = 93;
 const elementoContador = document.getElementById('contador');
 const mensajeFinal = document.getElementById('mensajeFinal');
-const duracionTotal = 3000; // 3 segundos
+const duracionTotal = 400; 
 
 // Función de easing (desaceleración suave)
 function easeOutCubic(t) {
