@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Comisiones</title>
+    <link rel="stylesheet" href="./Estilos/Estilos_Viaticos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario De Comisiones</h1>
+        
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="registro-comision">Registro de Comisión</button>
+            <button class="tab-button" data-tab="creacion-usuario">Creación de Usuario</button>
+        </div>
+
+        <!-- Tab Content: Registro de Comisión -->
+        <div id="registro-comision" class="tab-content active">
+            <form id="form-registro-comision">
+                <div class="form-group">
+                    <label for="nombre-comision">Nombre <span class="required">*</span></label>
+                    <select id="nombre-comision" name="nombre" required>
+                        <option value="">Seleccione un nombre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cedula-comision">Cédula <span class="required">*</span></label>
+                    <input type="text" id="cedula-comision" name="cedula" placeholder="Ingrese el número de cédula" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lugar-comision">Lugar de Comisión <span class="required">*</span></label>
+                    <input type="text" id="lugar-comision" name="lugarComision" placeholder="Ingrese el lugar de comisión" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-ida">Fecha de Ida <span class="required">*</span></label>
+                    <input type="date" id="fecha-ida" name="fechaIda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-regreso">Fecha de Regreso <span class="required">*</span></label>
+                    <input type="date" id="fecha-regreso" name="fechaRegreso" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-legalizacion">Fecha de Legalización <span class="required">*</span></label>
+                    <input type="date" id="fecha-legalizacion" name="fechaLegalizacion" required>
+                </div>
+
+                <div class="form-group form-group-full">
+                    <label for="objeto-comision">Objeto Comisión <span class="required">*</span></label>
+                    <textarea id="objeto-comision" name="objetoComision" placeholder="Ingrese el objeto de la comisión" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero-cdp">Número de CDP</label>
+                    <input type="text" id="numero-cdp" name="numeroCDP" placeholder="Ingrese el número de CDP">
+                </div>
+
+                <div class="form-group">
+                    <label for="numero-rp">Número de RP</label>
+                    <input type="text" id="numero-rp" name="numeroRP" placeholder="Ingrese el número de RP">
+                </div>
+
+                <div class="form-group">
+                    <label for="numero-obligacion">Número Obligación SIIF</label>
+                    <input type="text" id="numero-obligacion" name="numeroObligacion" placeholder="Ingrese el número de obligación SIIF">
+                </div>
+
+                <div class="form-group">
+                    <label for="rubro">Rubro</label>
+                    <select id="rubro" name="rubro">
+                        <option value="">Seleccione un rubro</option>
+                        <option value="16">16</option>
+                        <option value="65">65</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor-total">Valor Total <span class="required">*</span></label>
+                    <input type="text" id="valor-total" name="valorTotal" placeholder="Ingrese el valor total" class="input-right-align" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="legalizado">Legalizado</label>
+                    <select id="legalizado" name="legalizado">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group form-group-double">
+                    <label for="link-soportes">Link Soportes</label>
+                    <input type="text" id="link-soportes" name="linkSoportes" placeholder="Ingrese el link de los soportes">
+                </div>
+
+                <div class="form-group">
+                    <label for="medio-transporte">Medio Transporte <span class="required">*</span></label>
+                    <select id="medio-transporte" name="medioTransporte" required>
+                        <option value="">Seleccione un medio de transporte</option>
+                        <option value="Aereo">Aéreo</option>
+                        <option value="Terrestre">Terrestre</option>
+                        <option value="Ninguno">Ninguno</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor-tiquete">Valor Tiquete</label>
+                    <input type="text" id="valor-tiquete" name="valorTiquete" placeholder="Ingrese el valor del tiquete" class="input-right-align">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Registrar Comisión</button>
+                    <button type="reset" class="btn-reset">Limpiar Formulario</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tab Content: Creación de Usuario -->
+        <div id="creacion-usuario" class="tab-content">
+            <form id="form-creacion-usuario">
+                <div class="form-group">
+                    <label for="nombre-usuario">Nombre <span class="required">*</span></label>
+                    <input type="text" id="nombre-usuario" name="nombre" placeholder="Ingrese el nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cedula-usuario">Cédula <span class="required">*</span></label>
+                    <input type="text" id="cedula-usuario" name="cedula" placeholder="Ingrese el número de cédula" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Crear Usuario</button>
+                    <button type="reset" class="btn-reset">Limpiar Formulario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="form-handler.js"></script>
+    <script src="powerautomate-flow.js"></script>
+</body>
+</html>
